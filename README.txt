@@ -11,29 +11,32 @@ IPython, la interactividad al poder
 
 
 Cómo ejecutar la charla
-=======================
+------------------------
 
 Esta presentación interactiva usa una clase incluída en IPython, ``IPyhton.demo.CleanDemo``
 que importa el módulo ``charla.py`` y con un simple marcado permite secuenciar 
 bloques interactivos. 
 
-Para lanzar la presentación ejecute
+Para lanzar la presentación ejecute::
 
-$ ipython alpoder.py
+    $ ipython alpoder.py
 
 
 Controles
-==========
+---------
 
->>> d()     #para avanzar un bloque/slide
->>> d(i)     #para ir al ``i``ésimo bloque
->>> d.again() #para repetir la última
->>> d.jump(n) #para saltar n bloques (Ej: d.jump(-1) para volver al último bloque mostrado)
->>> d.reset() #para iniciar de nuevo
+.. code-block:: pycon
+
+    >>> d()     #para mostrar el bloque/slide actual e incremetar +1 el cursor
+    >>> d(i)     #para ir al ``i``ésimo bloque (sin cambiar el cursor)
+    >>> d.again() #para repetir el último bloque mostrado
+    >>> d.jump(n) #para mover el cursor n bloques (Ej: d.jump(-1) para volver al último bloque mostrado)
+    >>> d.reset() #para mover el cursor al inicio.
 
 
 Repositorio
-===========
+------------
+
 http://github.com/nqnwebs/IPython-interactive-talk
 
 
