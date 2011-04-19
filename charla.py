@@ -212,17 +212,60 @@ def mi_productoria(seq):
 
 
 """
-Debugging
------------
+Debugging 1/3
+--------------
 """
+
+# Ipython viene con un depurador que es a PDD lo que Ipython al Shell estándar
 
 # %pdb
 
-# se ejecuta automáticamente el debugger cuando ocurre una excepción.
+# Indica que se ejecuta automáticamente el debugger cuando ocurre una excepción.
 
-# Raise TypeError()
+# raise TypeError()
 
 # <demo> stop
+
+"""
+Debugging 2/3
+--------------
+"""
+
+# Sin tenerlo automático, se puede invocar el depurador con
+
+# %debug 
+
+n=0
+3/n
+
+
+# # <demo> stop
+
+"""
+Debugging 3/3
+--------------
+"""
+
+# Se puede invocar un shell interactivo desde nuestro código
+
+def test_ishell():
+    n = 10	
+    from IPython.Shell import IPShellEmbed; ishell = IPShellEmbed(); ishell()
+
+# test_ishell()
+
+# # <demo> stop
+
+# También
+# $ pip install ipdb
+
+def test_ipdb():
+    n = 10	
+    import ipdb; ipdb.set_trace()
+
+# test_ipdb()
+
+# # <demo> stop
 
 
 """
